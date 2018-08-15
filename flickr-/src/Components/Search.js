@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import flickrActions from "../Actions/flickrActions";
 
 class Search extends Component {
     constructor (props) {
@@ -16,13 +17,14 @@ class Search extends Component {
 
     submit (e) {
         e.preventDefault();
+        this.setState({inputValue: ''});
     }
 
     render () {
         return (
             <form onSubmit={(e) => this.submit(e)}>
                 <div className='searchContainer'>
-                    <input type='text' placeholder='Search' onChange={this.updateInputValue.bind(this)}/>
+                    <input type='text' value={this.state.inputValue} placeholder='Search' onChange={this.updateInputValue.bind(this)}/>
                     <input type="submit"/>
                 </div>
             </form>

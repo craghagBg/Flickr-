@@ -6,11 +6,11 @@ import MainContainer from "./Components/MainContainer";
 class App extends Component {
     render() {
         return (
-            <div className="Wrapper">
+            <div>
                 <Header />
                 <MainContainer />
             </div>
-        );1
+        );
     }
 }
 

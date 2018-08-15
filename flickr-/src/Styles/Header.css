@@ -17,8 +17,8 @@ input[type=text] {
     border-radius: 4%;
     outline: none;
     padding: 8px 35px 8px 8px;
-    margin-bottom: 10px;
     box-sizing: border-box;
+    margin-left: 10%;
     transition: 2s;
 }
 
