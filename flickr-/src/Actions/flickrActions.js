@@ -1,10 +1,10 @@
 import dispatcher from '../dispatcher'
 
 let flickrActions = {
-    fetchData: (title) => {
+    fetchData: (text) => {
         dispatcher.dispatch({
             type: 'FETCH_DATA',
-            title
+            text
         })
     }
 };

@@ -2,38 +2,31 @@ import { EventEmitter } from 'events'
 import dispatcher from '../dispatcher'
 import data from '../data'
 
-class flickrStore extends EventEmitter {
+class FlickrStore extends EventEmitter {
     constructor () {
         super();
         this.items = [];
     }
 
-    getItems (title) {
-        data.get().then((items) => {
-            if (title) {
-                items = items.filter((item) => {
-                    if (item.tag.split(' ').contains(title)) {
-                        return item;
-                    }
-                })
-            }
+    getItems (text) {
+        data.get(text).then((items) => {
 
             this.items = items;
-            this.emit('change')
+            this.emit('change', {items});
         });
     }
 
     handleAction (action) {
         switch (action.type) {
             case 'FETCH_DATA': {
-                this.getItems(action.title)
+                this.getItems(action.text)
             }
         }
     }
 }
 
-let store = new flickrStore();
+let flickrStore = new FlickrStore();
 
-dispatcher.register(store.handleAction.bind(store));
+dispatcher.register(flickrStore.handleAction.bind(flickrStore));
 
-export default store
+export default flickrStore

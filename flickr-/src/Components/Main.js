@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Grid from './Grid.js'
 import Poster from './Poster.js'
+import Header from './Header'
+import flickrAction from '../Actions/flickrActions'
 import flickerStore from '../Stores/flickrStore'
 
-class MainContainer extends Component {
+class Main extends Component {
     constructor (props) {
         super(props);
 
@@ -12,17 +14,17 @@ class MainContainer extends Component {
             items: []
         };
 
-        flickerStore.on('change', () => {
-            this.setState({ items: flickerStore.items })
+        flickerStore.on('change', (event) => {
+            this.setState({ items: event.items })
         })
     }
 
     componentDidMount() {
-        this.setState({ items: flickerStore.getItems() })
+        flickrAction.fetchData();
     }
 
     showPoster () {
-
+        console.log('showPoster');
     }
 
     nextPoster () {
@@ -32,10 +34,10 @@ class MainContainer extends Component {
     render () {
         return (
             <Switch>
-                <Route path='/' component={Grid}/>
-                {/*<Route path='#' component={Poster}/>*/}
-            </Switch>)
+                <Route path='/' component={() => <Grid items={this.state.items} onclick={this.showPoster.bind(this)} />}/>
+            </Switch>
+        )
     }
 }
 
-export default MainContainer
+export default Main
