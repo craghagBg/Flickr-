@@ -18,7 +18,7 @@ class Grid extends Component {
                     <div className='first-row'>
                         <span className='title'>{item.title}</span> by <span className='author'>{item.author}</span>
                     </div>
-                    <textarea className='second-row description'>{item.title}</textarea>
+                    <div className='second-row description'>{item.description}</div>
                     <div className='third-row tags'>Tags: {item.tag}</div>
                 </li>
             )

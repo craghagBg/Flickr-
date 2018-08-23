@@ -14,10 +14,11 @@ ul li {
   box-sizing: border-box;
   display: inline-block;
   margin: 10px;
+  width: 300px;
 
 }
 
-textarea {
+.description {
   background-color: #333333;
   width: 300px;
   height: 100px;
@@ -28,7 +29,6 @@ textarea {
 
 .title {
   width: 50px;
-  white-space: nowrap;
   word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
