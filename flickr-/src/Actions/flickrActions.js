@@ -1,10 +1,16 @@
 import dispatcher from '../dispatcher'
 
 let flickrActions = {
-    fetchData: (text) => {
+    /**
+     *
+     * @param {String} text - search text
+     * @param {Number} page - page > 1 -> next page; page === 1 -> new search
+     */
+    fetchData: (text, page) => {
         dispatcher.dispatch({
             type: 'FETCH_DATA',
-            text
+            text,
+            page
         })
     }
 };

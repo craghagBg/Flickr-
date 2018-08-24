@@ -8,18 +8,18 @@ class FlickrStore extends EventEmitter {
         this.items = [];
     }
 
-    getItems (text) {
-        data.get(text).then((items) => {
+    getItems (text, page) {
+        data.get(text, page).then((items) => {
 
             this.items = items;
-            this.emit('change', {items});
+            this.emit('change', {items, text, page});
         });
     }
 
     handleAction (action) {
         switch (action.type) {
             case 'FETCH_DATA': {
-                this.getItems(action.text)
+                this.getItems(action.text, action.page)
             }
         }
     }

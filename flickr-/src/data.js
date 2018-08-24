@@ -11,7 +11,7 @@ class data {
                 safe_search: '1',
                 format: 'json',
                 nojsoncallback: '1',
-                per_page: '30',
+                per_page: '32',
                 page: '1',
                 text: 'Holiday Extras',
                 extras: 'description,owner_name,tags'
