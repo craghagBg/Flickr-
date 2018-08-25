@@ -1,5 +1,5 @@
 import query from 'query-string'
-import tools from './common/tools'
+import tools from './tools'
 
 class data {
     constructor () {
@@ -16,7 +16,6 @@ class data {
                 text: 'Holiday Extras',
                 extras: 'description,owner_name,tags'
             },
-            sizeSuffix: 'n'
         }
     };
 
@@ -34,10 +33,12 @@ class data {
                     itemData.photos.photo.filter((photo) => {
                         const item  = {
                             id: photo.id,
-                            url: `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_${this.config.sizeSuffix}.jpg`,
+                            src: `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`,
                             description: photo.description._content,
                             title: photo.title,
-                            author: photo.ownername
+                            ownerName: photo.ownername,
+                            owner:photo.owner,
+                            tags: photo.tags
                         };
 
                         items.push(item);

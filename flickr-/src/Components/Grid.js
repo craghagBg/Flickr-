@@ -5,21 +5,35 @@ class Grid extends Component {
     constructor (props) {
         super();
         this.items = props.items;
+        this.sizeSuffix = {
+            small: '_n.jpg',
+            large: '_h.jpg'
+        }
     }
     render() {
         const containers = [];
 
         this.items.filter((item) => {
+            const location = {
+                pathname: `/poster/`,
+                state: { item, items: this.items }
+            };
+            const description = item.description ? `Description: ${item.description.slice(0, 120)}...` : '';
+            const tags = item.tags ? `Tags: ${item.tags}` : '';
+            const linkToPhoto = `https://www.flickr.com/photos/${item.owner}/${item.id}`;
+            const linkToAuthor = `https://www.flickr.com/photos/${item.owner}`;
+
             containers.push (
                 <li key={item.id} className='container'>
-                    <Link to={`/poster/${item.id}`}>
-                        <img src={item.url} />
+                    <Link to={location}>
+                        <img src={item.src + this.sizeSuffix.small} alt={item.id} />
                     </Link>
-                    <div className='first-row'>
-                        <span className='title'>{item.title}</span> by <span className='author'>{item.author}</span>
+                    <div className='row'>
+                        <a href={linkToPhoto} className='short left'>{ item.title }</a>
+                        <a href={ linkToAuthor } className='short right'>by {item.ownerName}</a>
                     </div>
-                    <div className='second-row description'>{item.description}</div>
-                    <div className='third-row tags'>Tags: {item.tag}</div>
+                    <div className='description'>{ description }</div>
+                    <div className='tags'>{ tags }</div>
                 </li>
             )
         });

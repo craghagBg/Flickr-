@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 import dispatcher from '../dispatcher'
-import data from '../data'
+import data from '../common/data'
 
 class FlickrStore extends EventEmitter {
     constructor () {

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Grid from './Grid.js'
 import Poster from './Poster.js'
-import Header from './Header'
 import flickrAction from '../Actions/flickrActions'
 import flickerStore from '../Stores/flickrStore'
+import '../Styles/Main.css'
 
 class Main extends Component {
     constructor (props) {
         super(props);
 
         this.state = {
-            text: 'Holiday Extras',
+            text: 'bmw',
             page: 1,
             items: []
         };
@@ -33,7 +33,7 @@ class Main extends Component {
     }
 
     isBottom(el) {
-        return el.getBoundingClientRect().bottom <= window.innerHeight;
+        return el.getBoundingClientRect().bottom - 10 <= window.innerHeight;
     }
     componentDidMount() {
         flickrAction.fetchData(this.state.text);
@@ -54,19 +54,15 @@ class Main extends Component {
         }
     };
 
-    showPoster () {
-        console.log('showPoster');
-    }
-
-    nextPoster () {
-
-    }
-
     render () {
         return (
-            <Switch>
-                <Route path='/' component={() => <Grid items={this.state.items} onclick={this.showPoster.bind(this)} />}/>
-            </Switch>
+            <div className='main'>
+                <Switch>
+                    <Route path= '/poster/' component={ Poster }/>
+                    <Route path='/' component={() => <Grid items={this.state.items} />}/>
+                </Switch>
+            </div>
+
         )
     }
 }
