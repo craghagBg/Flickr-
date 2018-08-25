@@ -8,6 +8,11 @@ class FlickrStore extends EventEmitter {
         this.items = [];
     }
 
+    /**
+     *
+     * @param {String} text
+     * @param {Number} page
+     */
     getItems (text, page) {
         data.get(text, page).then((items) => {
 
@@ -16,6 +21,10 @@ class FlickrStore extends EventEmitter {
         });
     }
 
+    /**
+     *
+     * @param {Object} action
+     */
     handleAction (action) {
         switch (action.type) {
             case 'FETCH_DATA': {

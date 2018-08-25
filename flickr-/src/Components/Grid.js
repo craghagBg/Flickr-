@@ -3,18 +3,20 @@ import '../Styles/Grid.css'
 import { Link } from 'react-router-dom'
 
 class Grid extends Component {
+    /**
+     * @param props
+     */
     constructor (props) {
         super();
         this.items = props.items;
         this.sizeSuffix = {
             small: '_n.jpg',
-            large: '_h.jpg'
+            large: '_b.jpg'
         }
     }
-    render() {
-        const containers = [];
 
-        this.items.filter((item) => {
+    render() {
+        const containers = this.items.map((item) => {
             const location = {
                 pathname: `/poster/`,
                 state: { item, items: this.items }
@@ -29,7 +31,7 @@ class Grid extends Component {
             const linkToPhoto = `https://www.flickr.com/photos/${item.owner}/${item.id}`;
             const linkToAuthor = `https://www.flickr.com/photos/${item.owner}`;
 
-            containers.push (
+            return (
                 <li key={item.id} className='container'>
                     <Link to={location}>
                         <img src={item.src + this.sizeSuffix.small} alt={item.id} />
@@ -43,6 +45,10 @@ class Grid extends Component {
                 </li>
             )
         });
+
+        if (containers.length === 0) {
+            return <h1>'No Result Found'</h1>
+        }
 
         return (
             <ul id='grid'>

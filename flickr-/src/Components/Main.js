@@ -7,6 +7,11 @@ import flickerStore from '../Stores/flickrStore'
 import '../Styles/Main.css'
 
 class Main extends Component {
+
+    /**
+     * constructor initialize search text and page = 1 => new search
+     * @param props
+     */
     constructor (props) {
         super(props);
 
@@ -16,8 +21,14 @@ class Main extends Component {
             items: []
         };
 
+        /**
+         * listen for scroll down
+         */
         document.addEventListener('scroll', this.trackScrolling.bind(this));
 
+        /**
+         *  listen for new data
+         */
         flickerStore.on('change', (event) => {
             if (event.page > 1) {
                 this.setState((prevState) => {
@@ -32,15 +43,25 @@ class Main extends Component {
         });
     }
 
+    /**
+     *
+     * @param {element} el
+     * @returns {boolean}
+     */
     isBottom(el) {
         return el.getBoundingClientRect().bottom - 10 <= window.innerHeight;
     }
+
+    /**
+     * fire the event for the new data
+     */
     componentDidMount() {
         flickrAction.fetchData(this.state.text);
 
     }
 
     componentWillUnmount() {
+        flickerStore.removeEventListener('change');
         document.removeEventListener('scroll', this.trackScrolling.bind(this));
     }
 
@@ -49,8 +70,7 @@ class Main extends Component {
 
         if (wrappedElement && this.isBottom(wrappedElement)) {
             console.log('main bottom reached');
-            flickrAction.fetchData(this.state.text, ++this.state.page );
-
+            flickrAction.fetchData(this.state.text, this.state.page + 1 );
         }
     };
 

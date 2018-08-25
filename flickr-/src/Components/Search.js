@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import flickrActions from "../Actions/flickrActions";
 
 class Search extends Component {
+    /**
+     *
+     * @param props
+     */
     constructor (props) {
         super(props);
 
@@ -10,11 +14,19 @@ class Search extends Component {
         }
     }
 
+    /**
+     *
+     * @param {event} e
+     */
     updateInputValue (e) {
         e.preventDefault();
         this.setState({inputValue: e.target.value});
     }
 
+    /**
+     *
+     * @param {event} e
+     */
     submit (e) {
         e.preventDefault();
         flickrActions.fetchData(this.state.inputValue)
