@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Styles/Grid.css'
 import { Link } from 'react-router-dom'
 
 class Grid extends Component {
@@ -18,7 +19,12 @@ class Grid extends Component {
                 pathname: `/poster/`,
                 state: { item, items: this.items }
             };
-            const description = item.description ? `Description: ${item.description.slice(0, 120)}...` : '';
+            const description = item.description ?
+                item.description.length > 120 ?
+                    `Description: ${item.description.slice(0, 120)}...`
+                    : `Description: ${item.description}`
+                : '';
+
             const tags = item.tags ? `Tags: ${item.tags}` : '';
             const linkToPhoto = `https://www.flickr.com/photos/${item.owner}/${item.id}`;
             const linkToAuthor = `https://www.flickr.com/photos/${item.owner}`;
@@ -29,8 +35,8 @@ class Grid extends Component {
                         <img src={item.src + this.sizeSuffix.small} alt={item.id} />
                     </Link>
                     <div className='row'>
-                        <a href={linkToPhoto} className='short left'>{ item.title }</a>
-                        <a href={ linkToAuthor } className='short right'>by {item.ownerName}</a>
+                        <a href={linkToPhoto} className='short left ext-link'>{ item.title }</a>
+                        <a href={ linkToAuthor } className='short right ext-link'>by {item.ownerName}</a>
                     </div>
                     <div className='description'>{ description }</div>
                     <div className='tags'>{ tags }</div>
@@ -39,7 +45,7 @@ class Grid extends Component {
         });
 
         return (
-            <ul>
+            <ul id='grid'>
                 {containers}
             </ul>
         )

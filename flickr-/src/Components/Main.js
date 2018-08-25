@@ -45,9 +45,9 @@ class Main extends Component {
     }
 
     trackScrolling = () => {
-        const wrappedElement = document.getElementById('root');
+        const wrappedElement = document.getElementById('grid');
 
-        if (this.isBottom(wrappedElement)) {
+        if (wrappedElement && this.isBottom(wrappedElement)) {
             console.log('main bottom reached');
             flickrAction.fetchData(this.state.text, ++this.state.page );
 

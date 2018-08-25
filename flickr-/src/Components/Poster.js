@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import tools from '../common/tools'
+import '../Styles/Poster.css'
 
 class Poster extends Component {
 
@@ -52,10 +53,14 @@ class Poster extends Component {
         }
 
         return (
-            <div>
-                <button onClick={this.prev.bind(this)}>Prev</button>
+            <div >
+                <div>
+                    <button className='poster-button left' onClick={this.prev.bind(this)}>Prev</button>
+                    <button className='poster-button'><Link  to='/'>Back</Link></button>
+                    <button className='poster-button right' onClick={this.next.bind(this)}>Next</button>
+                </div>
                 <img src={this.state.item.src + this.sizeSuffix.large} />
-                <button onClick={this.next.bind(this)}>next</button>
+
             </div>
 
         )
