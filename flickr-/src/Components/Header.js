@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <div className='App-Header'>
-                <h1 className="App-title"><Link to='/'>Flickr</Link></h1>
+                <h1 className="App-title"><Link to={process.env.PUBLIC_URL}>Flickr</Link></h1>
                 <Search />
             </div>
         );
