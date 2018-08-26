@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c9aac19-2ad1-4f79-aac5-ae06d5c61b70" name="Default" comment="test">
+    <list default="true" id="7c9aac19-2ad1-4f79-aac5-ae06d5c61b70" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Main.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Main.js" />
-      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Poster.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Poster.js" />
-      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Search.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Search.js" />
-      <change beforePath="$PROJECT_DIR$/flickr-/src/Stores/flickrStore.js" afterPath="$PROJECT_DIR$/flickr-/src/Stores/flickrStore.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/asset-manifest.json" afterPath="$PROJECT_DIR$/flickr-/build/asset-manifest.json" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/index.html" afterPath="$PROJECT_DIR$/flickr-/build/index.html" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/service-worker.js" afterPath="$PROJECT_DIR$/flickr-/build/service-worker.js" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.c14762c4.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.c14762c4.js.map" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="756">
-              <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+              <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -348,7 +348,7 @@
       <workItem from="1534335250000" duration="6589000" />
       <workItem from="1534399134269" duration="18972000" />
       <workItem from="1534768247749" duration="2276000" />
-      <workItem from="1534771957182" duration="125210000" />
+      <workItem from="1534771957182" duration="125329000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1534152279996</created>
@@ -469,11 +469,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535287700514</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix remove events">
+      <created>1535313650860</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1535313650860</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203690000" />
+    <option name="totallyTimeSpent" value="203809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
@@ -563,7 +570,8 @@
     <MESSAGE value="fix bugs...." />
     <MESSAGE value="move build in src" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix remove events" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix remove events" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,7 +967,7 @@
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
-          <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
