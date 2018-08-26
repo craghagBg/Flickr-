@@ -16,6 +16,8 @@ class Grid extends Component {
     }
 
     render() {
+        let key = 0;
+
         const containers = this.items.map((item) => {
             const location = {
                 pathname: `/poster/`,
@@ -32,7 +34,7 @@ class Grid extends Component {
             const linkToAuthor = `https://www.flickr.com/photos/${item.owner}`;
 
             return (
-                <li key={item.id} className='container'>
+                <li key={++key} className='container'>
                     <Link to={location}>
                         <img src={item.src + this.sizeSuffix.small} alt={item.id} />
                     </Link>

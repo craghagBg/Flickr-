@@ -29,18 +29,24 @@ class Main extends Component {
         /**
          *  listen for new data
          */
-        flickerStore.on('change', (event) => {
-            if (event.page > 1) {
-                this.setState((prevState) => {
-                    return {
-                        text: event.text,
-                        items: prevState.items.concat(event.items)
-                    }
-                })
-            } else {
-                this.setState({ items: event.items, text: event.text })
-            }
-        });
+        flickerStore.on('change', this.onChange.bind(this));
+    }
+
+    /**
+     * Handle the new data
+     * @param event
+     */
+    onChange (event) {
+        if (event.page > 1) {
+            this.setState((prevState) => {
+                return {
+                    text: event.text,
+                    items: prevState.items.concat(event.items)
+                }
+            })
+        } else {
+            this.setState({ items: event.items, text: event.text })
+        }
     }
 
     /**
@@ -56,21 +62,27 @@ class Main extends Component {
      * fire the event for the new data
      */
     componentDidMount() {
-        flickrAction.fetchData(this.state.text);
+        flickrAction.fetchData(this.state.text, 1);
 
     }
 
+    /**
+     * remove event listeners
+     */
     componentWillUnmount() {
-        flickerStore.removeEventListener('change');
+        flickerStore._events = [];
         document.removeEventListener('scroll', this.trackScrolling.bind(this));
     }
 
+    /**
+     * track the scrolling
+     */
     trackScrolling = () => {
         const wrappedElement = document.getElementById('grid');
 
         if (wrappedElement && this.isBottom(wrappedElement)) {
             console.log('main bottom reached');
-            flickrAction.fetchData(this.state.text, this.state.page + 1 );
+            flickrAction.fetchData(this.state.text, this.state.page + 1);
         }
     };
 

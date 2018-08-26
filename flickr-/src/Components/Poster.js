@@ -16,7 +16,8 @@ class Poster extends Component {
             item: tools.has(['location', 'state', 'item'], props) ? props.location.state.item : null,
             index: tools.has(['location', 'state', 'items'], props) ? props.location.state.items.indexOf(props.location.state.item) : null,
             items: tools.has(['location', 'state', 'items'], props) ? props.location.state.items : null,
-            newSearch: false
+            newSearch: false,
+            flickerStore: flickerStore
         };
         this.sizeSuffix = {
             small: '_n.jpg',
@@ -28,6 +29,10 @@ class Poster extends Component {
 
     onChange () {
         this.setState({ newSearch: true })
+    }
+
+    componentWillUnmount () {
+        flickerStore._events = [];
     }
 
     /**
