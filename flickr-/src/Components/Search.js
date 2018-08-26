@@ -29,7 +29,7 @@ class Search extends Component {
      */
     submit (e) {
         e.preventDefault();
-        flickrActions.fetchData(this.state.inputValue)
+        flickrActions.fetchData(this.state.inputValue, 1)
     }
 
     render () {

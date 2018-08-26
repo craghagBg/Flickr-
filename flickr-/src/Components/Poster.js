@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import flickerStore from '../Stores/flickrStore'
 import tools from '../common/tools'
 import '../Styles/Poster.css'
@@ -15,21 +15,20 @@ class Poster extends Component {
         this.state = {
             item: tools.has(['location', 'state', 'item'], props) ? props.location.state.item : null,
             index: tools.has(['location', 'state', 'items'], props) ? props.location.state.items.indexOf(props.location.state.item) : null,
-            items: tools.has(['location', 'state', 'items'], props) ? props.location.state.items : null,
-            newSearch: false,
-            flickerStore: flickerStore
+            items: tools.has(['location', 'state', 'items'], props) ? props.location.state.items : null
         };
         this.sizeSuffix = '_b.jpg';
 
-        flickerStore.on('change', this.onChange.bind(this))
+        this.onChange = this.onChange.bind(this);
+        flickerStore.on('change', this.onChange)
     }
 
     onChange () {
-        this.setState({ newSearch: true })
+        this.props.history.push('/');
     }
 
     componentWillUnmount () {
-        flickerStore._events = [];
+        flickerStore.removeListener('change', this.onChange)
     }
 
     /**
@@ -65,10 +64,6 @@ class Poster extends Component {
     }
 
     render () {
-        if (!this.state.item || this.state.newSearch) {
-            return <Redirect to='/'/>;
-        }
-
         return (
             <div >
                 <div>
@@ -77,11 +72,8 @@ class Poster extends Component {
                     <button className='poster-button right' onClick={this.next.bind(this)}>Next</button>
                 </div>
                 <img src={this.state.item.src + this.sizeSuffix} alt='No Data' />
-
             </div>
-
         )
-
     }
 }
 

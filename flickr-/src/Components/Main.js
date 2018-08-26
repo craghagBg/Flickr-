@@ -21,7 +21,8 @@ class Main extends Component {
             items: [],
             ready: false
         };
-
+        this.onChange = this.onChange.bind(this);
+        this.trackScrolling = this.trackScrolling.bind(this);
         /**
          * listen for scroll down
          */
@@ -30,7 +31,7 @@ class Main extends Component {
         /**
          *  listen for new data
          */
-        flickerStore.on('change', this.onChange.bind(this));
+        flickerStore.on('change', this.onChange);
     }
 
     /**
@@ -71,8 +72,8 @@ class Main extends Component {
      * remove event listeners
      */
     componentWillUnmount() {
-        flickerStore._events = [];
-        document.removeEventListener('scroll', this.trackScrolling.bind(this));
+        flickerStore.removeListener('change', this.onChange);
+        document.removeEventListener('scroll', this.trackScrolling);
     }
 
     /**
