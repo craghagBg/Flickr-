@@ -6,22 +6,19 @@ class Grid extends Component {
     /**
      * @param props
      */
-    constructor (props) {
+    constructor () {
         super();
-        this.items = props.items;
-        this.sizeSuffix = {
-            small: '_n.jpg',
-            large: '_b.jpg'
-        }
+
+        this.sizeSuffix = '_n.jpg';
     }
 
     render() {
         let key = 0;
 
-        const containers = this.items.map((item) => {
-            const location = {
+        const containers = this.props.items.map((item) => {
+            const linkData = {
                 pathname: `/poster/`,
-                state: { item, items: this.items }
+                state: { item, items: this.props.items }
             };
             const description = item.description ?
                 item.description.length > 120 ?
@@ -35,8 +32,8 @@ class Grid extends Component {
 
             return (
                 <li key={++key} className='container'>
-                    <Link to={location}>
-                        <img src={item.src + this.sizeSuffix.small} alt={item.id} />
+                    <Link to={linkData}>
+                        <img src={item.src + this.sizeSuffix} alt={item.id} />
                     </Link>
                     <div className='row'>
                         <a href={linkToPhoto} className='short left ext-link'>{ item.title }</a>
@@ -48,7 +45,7 @@ class Grid extends Component {
             )
         });
 
-        if (containers.length === 0) {
+        if (containers.length === 0 && this.props.ready === true) {
             return <h1>'No Result Found'</h1>
         }
 

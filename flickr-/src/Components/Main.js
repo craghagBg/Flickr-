@@ -18,7 +18,8 @@ class Main extends Component {
         this.state = {
             text: 'bmw',
             page: 1,
-            items: []
+            items: [],
+            ready: false
         };
 
         /**
@@ -45,7 +46,7 @@ class Main extends Component {
                 }
             })
         } else {
-            this.setState({ items: event.items, text: event.text })
+            this.setState({ items: event.items, text: event.text, ready: true })
         }
     }
 
@@ -91,7 +92,7 @@ class Main extends Component {
             <div className='main'>
                 <Switch>
                     <Route path= '/poster/' component={ Poster }/>
-                    <Route path='/' component={() => <Grid items={this.state.items} />}/>
+                    <Route path='/' component={() => <Grid items={this.state.items} ready={this.state.ready}/>}/>
                 </Switch>
             </div>
 

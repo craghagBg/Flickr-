@@ -19,10 +19,7 @@ class Poster extends Component {
             newSearch: false,
             flickerStore: flickerStore
         };
-        this.sizeSuffix = {
-            small: '_n.jpg',
-            large: '_b.jpg'
-        };
+        this.sizeSuffix = '_b.jpg';
 
         flickerStore.on('change', this.onChange.bind(this))
     }
@@ -79,7 +76,7 @@ class Poster extends Component {
                     <button className='poster-button'><Link  to='/'>Back</Link></button>
                     <button className='poster-button right' onClick={this.next.bind(this)}>Next</button>
                 </div>
-                <img src={this.state.item.src + this.sizeSuffix.large} alt='No Data' />
+                <img src={this.state.item.src + this.sizeSuffix} alt='No Data' />
 
             </div>
 
