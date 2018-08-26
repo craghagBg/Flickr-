@@ -29,7 +29,9 @@ class FlickrStore extends EventEmitter {
         switch (action.type) {
             case 'FETCH_DATA': {
                 this.getItems(action.text, action.page)
-            }
+            } break;
+
+            default: break
         }
     }
 }
