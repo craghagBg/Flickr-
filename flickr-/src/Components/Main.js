@@ -92,8 +92,8 @@ class Main extends Component {
         return (
             <div className='main'>
                 <Switch>
-                    <Route path= {`/flickr-/build${process.env.PUBLIC_URL}/poster/`} component={ Poster }/>
-                    <Route path={`/flickr-/build${process.env.PUBLIC_URL}`} component={() => <Grid items={this.state.items} ready={this.state.ready}/>}/>
+                    <Route path= '/flickr-/build/poster/' component={ Poster }/>
+                    <Route path='/flickr-/build/' component={() => <Grid items={this.state.items} ready={this.state.ready}/>}/>
                 </Switch>
             </div>
 

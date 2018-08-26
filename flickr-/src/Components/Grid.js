@@ -17,7 +17,7 @@ class Grid extends Component {
 
         const containers = this.props.items.map((item) => {
             const linkData = {
-                pathname: `/flickr-/build${process.env.PUBLIC_URL}/poster/`,
+                pathname: '/flickr-/build/poster/',
                 state: { item, items: this.props.items }
             };
             const description = item.description ?
