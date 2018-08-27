@@ -6,8 +6,13 @@
       <change beforePath="$PROJECT_DIR$/flickr-/build/asset-manifest.json" afterPath="$PROJECT_DIR$/flickr-/build/asset-manifest.json" />
       <change beforePath="$PROJECT_DIR$/flickr-/build/index.html" afterPath="$PROJECT_DIR$/flickr-/build/index.html" />
       <change beforePath="$PROJECT_DIR$/flickr-/build/service-worker.js" afterPath="$PROJECT_DIR$/flickr-/build/service-worker.js" />
-      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.dcb85963.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.dcb85963.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.16e31710.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/flickr-/build/static/js/main.16e31710.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/flickr-/package.json" afterPath="$PROJECT_DIR$/flickr-/package.json" />
+      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Grid.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Grid.js" />
+      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Header.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Header.js" />
+      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Main.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Main.js" />
+      <change beforePath="$PROJECT_DIR$/flickr-/src/Components/Poster.js" afterPath="$PROJECT_DIR$/flickr-/src/Components/Poster.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,21 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flickr-/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="516">
+              <caret line="95" column="75" lean-forward="false" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="75" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -47,8 +42,8 @@
       <file leaf-file-name="Poster.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Poster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-465">
-              <caret line="26" column="72" lean-forward="false" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+            <state relative-caret-position="237">
+              <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -56,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
+            <state relative-caret-position="318">
               <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flickr-/src/App.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flickr-/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="729">
+              <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -106,15 +101,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-459">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1535365959737" expanded="true" signature="57268:57285" ph="..." />
+                <marker date="1535365959737" expanded="true" signature="57268:57303" ph="..." />
+                <marker date="1535365959737" expanded="true" signature="57268:57316" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Grid.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="19" column="75" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="75" />
+            <state relative-caret-position="-780">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <marker date="1535323796742" expanded="true" signature="1097:1667" ph="..." />
-                <marker date="1535323796742" expanded="true" signature="1287:1512" ph="..." />
-                <marker date="1535323796742" expanded="true" signature="1863:1910" ph="..." />
+                <marker date="1535325111810" expanded="true" signature="1083:1653" ph="..." />
+                <marker date="1535325111810" expanded="true" signature="1273:1498" ph="..." />
+                <marker date="1535325111810" expanded="true" signature="1849:1896" ph="..." />
               </folding>
             </state>
           </provider>
@@ -124,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+              <caret line="9" column="94" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -216,11 +225,11 @@
         <option value="$PROJECT_DIR$/flickr-/src/Components/Search.js" />
         <option value="$PROJECT_DIR$/flickr-/src/Stores/flickrStore.js" />
         <option value="$PROJECT_DIR$/flickr-/README.md" />
-        <option value="$PROJECT_DIR$/flickr-/package.json" />
         <option value="$PROJECT_DIR$/flickr-/src/Components/Grid.js" />
         <option value="$PROJECT_DIR$/flickr-/src/Components/Header.js" />
         <option value="$PROJECT_DIR$/flickr-/src/Components/Main.js" />
         <option value="$PROJECT_DIR$/flickr-/src/Components/Poster.js" />
+        <option value="$PROJECT_DIR$/flickr-/package.json" />
       </list>
     </option>
   </component>
@@ -341,7 +350,7 @@
       <workItem from="1534335250000" duration="6589000" />
       <workItem from="1534399134269" duration="18972000" />
       <workItem from="1534768247749" duration="2276000" />
-      <workItem from="1534771957182" duration="129783000" />
+      <workItem from="1534771957182" duration="132194000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1534152279996</created>
@@ -497,11 +506,39 @@
       <option name="project" value="LOCAL" />
       <updated>1535323804283</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="production path fixx">
+      <created>1535324103689</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1535324103689</updated>
+    </task>
+    <task id="LOCAL-00024" summary="production path fixx">
+      <created>1535324117749</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1535324117749</updated>
+    </task>
+    <task id="LOCAL-00025" summary="production path fixx">
+      <created>1535324828633</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1535324828633</updated>
+    </task>
+    <task id="LOCAL-00026" summary="production path fixx">
+      <created>1535324874926</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1535324874926</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208263000" />
+    <option name="totallyTimeSpent" value="210674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
@@ -593,7 +630,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="fix remove events" />
     <MESSAGE value="production path fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="production path fix" />
+    <MESSAGE value="production path fixx" />
+    <option name="LAST_COMMIT_MESSAGE" value="production path fixx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -815,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/public/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -929,14 +959,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flickr-/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -969,14 +991,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1535365959737" expanded="true" signature="57268:57285" ph="..." />
+            <marker date="1535365959737" expanded="true" signature="57268:57303" ph="..." />
+            <marker date="1535365959737" expanded="true" signature="57268:57316" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="19" column="75" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="75" />
+        <state relative-caret-position="-780">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <marker date="1535323796742" expanded="true" signature="1097:1667" ph="..." />
-            <marker date="1535323796742" expanded="true" signature="1287:1512" ph="..." />
-            <marker date="1535323796742" expanded="true" signature="1863:1910" ph="..." />
+            <marker date="1535325111810" expanded="true" signature="1083:1653" ph="..." />
+            <marker date="1535325111810" expanded="true" signature="1273:1498" ph="..." />
+            <marker date="1535325111810" expanded="true" signature="1849:1896" ph="..." />
           </folding>
         </state>
       </provider>
@@ -984,15 +1018,15 @@
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+          <caret line="9" column="94" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="516">
+          <caret line="95" column="75" lean-forward="false" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="75" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -1001,8 +1035,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Poster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="26" column="72" lean-forward="false" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+        <state relative-caret-position="237">
+          <caret line="26" column="74" lean-forward="false" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1011,8 +1045,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flickr-/src/Components/Search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
+        <state relative-caret-position="318">
           <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flickr-/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding />
         </state>
       </provider>

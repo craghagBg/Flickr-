@@ -24,7 +24,7 @@ class Poster extends Component {
     }
 
     onChange () {
-        this.props.history.push('/flickr-/build/');
+        this.props.history.push(`${process.env.PUBLIC_URL}/flickr-/build/`);
     }
 
     componentWillUnmount () {
