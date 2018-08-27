@@ -36,7 +36,7 @@ class Main extends Component {
 
     /**
      * Handle the new data
-     * @param event
+     * @param {event} event
      */
     onChange (event) {
         if (event.page > 1) {
@@ -65,7 +65,6 @@ class Main extends Component {
      */
     componentDidMount() {
         flickrAction.fetchData(this.state.text, 1);
-
     }
 
     /**
