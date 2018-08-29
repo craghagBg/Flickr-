@@ -1,12 +1,9 @@
 .main {
-    margin: 0 auto;
-    text-align: center;
-}
+  margin: 0 auto;
+  text-align: center; }
 
 .left {
-    float: left;
-}
+  float: left; }
 
 .right {
-    float: right;
-}
+  float: right; }

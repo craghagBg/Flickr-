@@ -1,41 +1,37 @@
 .App-Header {
-    background-color: #222;
-    height: 40px;
-    padding: 10px;
-    color: white;
-}
+  background-color: #222;
+  height: 40px;
+  padding: 10px;
+  color: white; }
 
 .App-title {
-    font-size: 1.5em;
-    margin: 0;
-    float: left;
-}
+  font-size: 1.5em;
+  margin: 0;
+  float: left; }
 
 input[type=text] {
-    width: 70%;
-    border: 2px solid #aaa;
-    border-radius: 4%;
-    outline: none;
-    padding: 8px 35px 8px 8px;
-    box-sizing: border-box;
-    margin-left: 10%;
-    transition: 2s;
-}
+  width: 70%;
+  border: 2px solid #aaa;
+  border-radius: 4%;
+  outline: none;
+  padding: 8px 35px 8px 8px;
+  box-sizing: border-box;
+  margin-left: 10%;
+  transition: 2s; }
 
 input[type=text]:focus {
-    border-color: dodgerblue;
-    box-shadow: 0 0 8px 1px dodgerblue;
-}
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 1px dodgerblue; }
+
 input[type="submit"] {
-    outline:none;
-    background: white url('../search.png') no-repeat right;
-    background-size: 25px;
-    margin-left: -35px;
-    margin-right: 35px;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    color: white;
-    border: 0;
-    -webkit-appearance: none;
-}
+  outline: none;
+  background: white url("../search.png") no-repeat right;
+  background-size: 25px;
+  margin-left: -35px;
+  margin-right: 35px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  color: white;
+  border: 0;
+  -webkit-appearance: none; }
