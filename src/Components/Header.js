@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import '../Styles/Header.css'
 import Search from "./Search";
 
+/**
+ *
+ */
 class Header extends Component {
     render() {
         return (
